@@ -5,7 +5,7 @@
 - [x] `even_odd`
 - [x] `find_shortest_longest_word`
 - [x] `corresponding_pairs`
-- [ ] `is_prime`
+- [x] `is_prime`
 - [ ] `seconds_to_str`
 - [ ] `cartesian_product`
 - [ ] `dfs`
