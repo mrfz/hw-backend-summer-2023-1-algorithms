@@ -11,4 +11,6 @@ def corresponding_pairs(arr1: list[Any], arr2: list[Any]) -> list[tuple[Any, Any
     corresponding_pairs([1, 2], [3, 4]) == [(1, 3), (2, 4)]
     """
     output = []
+    for i in range(min([len(arr1), len(arr2)])):
+      output.append((arr1[i], arr2[i]))
     return output
