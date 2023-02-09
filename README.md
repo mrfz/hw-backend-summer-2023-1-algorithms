@@ -1,5 +1,17 @@
 # Задачи KTS Metaclass: Python
 
+- [x] `flip_kv_vk`
+- [x] `flip_kv_vk_safe`
+- [x] `even_odd`
+- [ ] `find_shortest_longest_word`
+- [ ] `corresponding_pairs`
+- [ ] `is_prime`
+- [ ] `seconds_to_str`
+- [ ] `cartesian_product`
+- [ ] `dfs`
+- [ ] `bfs`
+
+
 ## 1. Переворачивание словаря
 
 `flip_kv_vk`
