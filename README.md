@@ -3,8 +3,8 @@
 - [x] `flip_kv_vk`
 - [x] `flip_kv_vk_safe`
 - [x] `even_odd`
-- [ ] `find_shortest_longest_word`
-- [ ] `corresponding_pairs`
+- [x] `find_shortest_longest_word`
+- [x] `corresponding_pairs`
 - [ ] `is_prime`
 - [ ] `seconds_to_str`
 - [ ] `cartesian_product`
