@@ -23,7 +23,7 @@ def seconds_to_str(seconds: int) -> str:
       'm' : '00',
       's' : '00'
     }
-    output = ''.join([str(seconds % 60),'s'])
+    output = ''.join([int_to_2dig_str(part_div(seconds, 60)[1]),'s'])
     return output
 
 def part_div(input: int, divisor: int) -> tuple[Optional[int], Optional[int]]:
@@ -33,7 +33,7 @@ def part_div(input: int, divisor: int) -> tuple[Optional[int], Optional[int]]:
     4,2 -> (2,0)
     5,2 3> (2,1)
     '''
-    if devisor != 0:
+    if divisor != 0:
       return (input//divisor, input%divisor)
     else:
       return (None, None)
@@ -42,9 +42,9 @@ def int_to_2dig_str (input: int) -> str:
     '''
     add 0 to the one digit int input and returns string, for input bigger than 99 returns None
     '''
-    if input < 9:
-      output = '0'.join(str(input))
-    elif input < 99:
+    if input < 10:
+      output = ''.join(('0',str(input)))
+    elif input < 100:
       output = ''.join(str(input)) 
     else:
       return None
