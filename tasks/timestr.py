@@ -18,25 +18,21 @@ def seconds_to_str(seconds: int) -> str:
     output = ''
 
     time_dict = {
-      'd' : '00',
-      'h' : '00',
-      'm' : '00',
-      's' : '00'
+      'd' : int_to_2dig_str(seconds//86400)
     }
-    output = ''.join([int_to_2dig_str(part_div(seconds, 60)[1]),'s'])
+
+    time_dict['h'] = int_to_2dig_str((seconds - int(time_dict['d'])*86400) // 3600)
+    time_dict['m'] = int_to_2dig_str((seconds - int(time_dict['d'])*86400 - int(time_dict['h'])*3600) // 60)
+    time_dict['s'] = int_to_2dig_str(seconds % 60)
+  
+    write_value = False
+  
+    for key, value in time_dict.items():
+      
+      if (value != '00' and key != 's') or write_value == True or key == 's':
+        write_value = True
+        output = output + value + key
     return output
-
-def part_div(input: int, divisor: int) -> tuple[Optional[int], Optional[int]]:
-    '''
-    Return tuple with result of // and % division ov the input by the divisor
-
-    4,2 -> (2,0)
-    5,2 3> (2,1)
-    '''
-    if divisor != 0:
-      return (input//divisor, input%divisor)
-    else:
-      return (None, None)
 
 def int_to_2dig_str (input: int) -> str:
     '''
