@@ -8,7 +8,7 @@
 - [x] `is_prime`
 - [x] `seconds_to_str`
 - [x] `cartesian_product`
-- [ ] `dfs`
+- [x] `dfs`
 - [ ] `bfs`
 
 

@@ -33,8 +33,10 @@ class Graph:
         while len(nodes) > 0:
           current_node = nodes.pop(0)
           if current_node not in output: output.append(current_node)
-          for node in current_node.outbound:
-            if node not in nodes and node not in output: nodes.append(node)
+          out_sibs = current_node.outbound
+         # out_sibs.reverse()
+          for node in out_sibs:
+            if node  not in output: nodes.insert(out_sibs.index(node), node)
             
       
         return output
