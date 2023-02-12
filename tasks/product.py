@@ -11,4 +11,7 @@ def cartesian_product(arr1: list[Any], arr2: list[Any]) -> list:
     cartesian_product([1, 2], [3, 4]) == [(1, 3), (1, 4), (2, 3), (2, 4)]
     """
     output = []
+    for i in range (len(arr1)):
+      for j in range(len(arr2)):
+        output.append((arr1[i], arr2[j]))
     return output
