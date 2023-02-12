@@ -9,7 +9,7 @@
 - [x] `seconds_to_str`
 - [x] `cartesian_product`
 - [x] `dfs`
-- [ ] `bfs`
+- [x] `bfs`
 
 
 ## 1. Переворачивание словаря

@@ -42,4 +42,15 @@ class Graph:
         return output
 
     def bfs(self) -> list[Node]:
-        raise NotImplementedError
+        output = []
+        nodes = [self._root]
+        while len(nodes) > 0:
+          current_node = nodes.pop(0)
+         # nodes.extend(current_node.outbound)
+          if current_node not in output: output.append(current_node)
+          out_sibs = current_node.outbound
+          for node in  out_sibs:
+            if node  not in output: nodes.append(node)
+        
+        return output
+  
