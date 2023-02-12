@@ -28,7 +28,16 @@ class Graph:
         self._root = root
 
     def dfs(self) -> list[Node]:
-        raise NotImplementedError
+        output = []
+        nodes = [self._root]
+        while len(nodes) > 0:
+          current_node = nodes.pop(0)
+          if current_node not in output: output.append(current_node)
+          for node in current_node.outbound:
+            if node not in nodes and node not in output: nodes.append(node)
+            
+      
+        return output
 
     def bfs(self) -> list[Node]:
         raise NotImplementedError
