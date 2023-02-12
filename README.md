@@ -7,7 +7,7 @@
 - [x] `corresponding_pairs`
 - [x] `is_prime`
 - [x] `seconds_to_str`
-- [ ] `cartesian_product`
+- [x] `cartesian_product`
 - [ ] `dfs`
 - [ ] `bfs`
 
